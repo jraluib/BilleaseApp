@@ -1,4 +1,5 @@
-// pages/SignUpPage.js
+const BasePage = require('./base.page');
+
 class SignUpPage {
     constructor(driver) {
         this.driver = driver;
