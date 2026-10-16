@@ -17,6 +17,7 @@
     "@wdio/spec-reporter": "^8.40.6",
     "allure-commandline": "^2.24.0",
     "test": "^3.3.0",
+    "uuid": "^9.0.0",
     "webdriverio": "^8.40.6"
   },
   "directories": {
