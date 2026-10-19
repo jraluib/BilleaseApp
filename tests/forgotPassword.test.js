@@ -1,7 +1,7 @@
 const WelcomePage = require('../pages/welcome.page');
 const LoginPage = require('../pages/login.page');
 const ForgotPasswordPage = require('../pages/forgotPassword.page');
-
+//Use an invalid account
 describe('BillEase Forgot Password Flow Tests', () => {
     it('should navigate to forgot password screen and submit password reset request', async () => {
         await WelcomePage.clickLogin();

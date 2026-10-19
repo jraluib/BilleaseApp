@@ -30,7 +30,7 @@ async function runSignUpTest() {
         // Step 1: Click standard layout Sign Up Entry Point
         await signUpPage.clickSignUp();
 
-        // Step 2: Feed simulated test data
+        // Step 2: Feed simulated test data non real ones as per instruction
         console.log('--- Entering Sign Up Details ---');
         await signUpPage.fillRegistrationForm(
             '9171234567',
