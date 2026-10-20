@@ -8,5 +8,5 @@ To run iOS Script, replace the content of `wdio.conf.js` located inside the proj
 ## Structure
 - `pages/`: Android Page Object Model (POM) files
 - `pages/ios/`: iOS XCUITest Page Object Model (POM) files (`ioswelcome.page.js`, `ioslogin.page.js`, `iosforgotPassword.page.js`, `iossignup.page.js`)
-- `tests/`: Test suites (`login.test.js`, `signup.test.js`, `forgotPassword.test.js`)
+- `tests/`: Test suites (`login.test.js`, `signup.testu.js`, `forgotPassword.testu.js`)
 - `config/`: Appium and WebdriverIO configuration files (`wdio.android.conf.js`, `wdio.ios.conf.js`, `appium.config.js`)

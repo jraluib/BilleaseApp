@@ -9,7 +9,7 @@ exports.config = {
         'platformName': 'Android',
         'appium:automationName': 'UiAutomator2',
         'appium:deviceName': 'Android_Emulator',
-        'appium:app': path.join(process.cwd(), './apps/billease-app.apk'), // Local app path
+        'appium:app': path.join(process.cwd(), './apps/ph.billeasev2.mobile'), // Local app path
         'appium:autoGrantPermissions': true
     }],
     framework: 'mocha',
