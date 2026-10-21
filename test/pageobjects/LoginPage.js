@@ -1,12 +1,13 @@
 import BasePage from './BasePage.js';
 import SignUpPage from './SignUpPage.js';
+import ForgotPasswordPage from './ForgotPasswordPage.js';
 
 class LoginPage extends BasePage {
 
  get phoneInputField() { return driver.$('//android.widget.EditText[@resource-id="ph.billease.app:id/phone_input"]'); }
   get nextButton() { return driver.$('//android.widget.Button[@text="Next"]'); }
-    get otpHeader() { return driver.$('//android.widget.TextView[contains(@text, "OTP") or contains(@text, "Verification")]'); }
-    get forgotPasswordLink() { return driver.$('//android.widget.TextView[contains(@text, "Forgot") or contains(@text, "forgot")]'); }
+
+  get forgotPasswordLink()  { return $('//*[@resource-id="login_link_forgot_password"]'); }
 
   get loginSegment()  { return $('//*[@resource-id="btn_log_in"]'); }
   get emailInput()    { return $('//*[@resource-id="login_input_email_or_phone"]'); }
@@ -29,7 +30,9 @@ class LoginPage extends BasePage {
  async clickLogin() {
         await this.tap(this.loginSegment);
     }
-
+ async clickForgotPassword() {
+        await this.tap(this.forgotPasswordLink);
+    }
   async login(email, password) {
     await this.tap(this.loginSegment);
     await this.type(this.emailInput, email);

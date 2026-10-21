@@ -12,7 +12,7 @@ class SignUpPage extends BasePage {
     }
  async signup(mobile, emailAddress) {
     await this.type(this.mobileNumberInput, mobile);
-    await this.type(this.emailAddressInput, emailAddress);
+ //   await this.type(this.emailAddressInput, emailAddress);
     await this.hideKeyboard();
     await this.tap(this.signUpButton);
   }

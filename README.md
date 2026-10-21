@@ -5,6 +5,12 @@ Notes: Wasn't able to test iOS run due to lack of available macOS machine/simula
 
 To run iOS Script, replace the content of `wdio.conf.js` located inside the project root folder with contents from `wdio.ios.conf.js` coming from the `config` folder.
 
+
+Showing the executable run of Login, Signup and forgot password
+
+Didnt add the other validation for time constraints but can be discussed and will be added if time permits
+
+Thats all Thank you :)
 ## Structure
 - `pages/`: Android Page Object Model (POM) files
 - `pages/ios/`: iOS XCUITest Page Object Model (POM) files (`ioswelcome.page.js`, `ioslogin.page.js`, `iosforgotPassword.page.js`, `iossignup.page.js`)

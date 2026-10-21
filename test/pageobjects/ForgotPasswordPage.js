@@ -1,17 +1,18 @@
 import BasePage from './BasePage.js';
 class ForgotPasswordPage extends BasePage {
-    get emailOrPhoneInput() { return driver.$('//android.widget.EditText[@resource-id="ph.billease.app:id/email_or_phone" or @resource-id="ph.billease.app:id/phone_input" or @resource-id="ph.billease.app:id/email"]'); }
-    get resetButton() { return driver.$('//android.widget.Button[contains(@text, "Reset") or contains(@text, "Send") or @text="Submit"]'); }
-    get successMessageHeader() { return driver.$('//android.widget.TextView[contains(@text, "Instructions") or contains(@text, "Sent") or contains(@text, "Check")]'); }
+   get forgotPasswordLink()  { return $('//*[@resource-id="login_link_forgot_password"]'); }
+    get resetButton()   { return $('//*[@resource-id="btn_reset"]'); }
+     get contactInput() { return $('//*[@resource-id="text_field_contact_to_reset"]'); }
 
     async enterContactInfo(contactInfo) {
-        await this.emailOrPhoneInput.waitForDisplayed({ timeout: 5000 });
-        await this.emailOrPhoneInput.setValue(contactInfo);
+        await this.contactInput.waitForDisplayed({ timeout: 5000 });
+        await this.contactInput.setValue(contactInfo);
     }
 
     async clickReset() {
-        await this.clickElement(this.resetButton);
+        await this.tap(this.resetButton);
     }
 }
 
-module.exports = new ForgotPasswordPage();
+
+export default new ForgotPasswordPage();
