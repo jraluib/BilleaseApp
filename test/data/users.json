@@ -1,0 +1,6 @@
+{
+  "valid":   { "email": "test@webdriver.io", "password": "Test1234!" },
+  "badEmail": { "email": "not-an-email",     "password": "Test1234!" },
+  "shortPassword": { "email": "test@webdriver.io", "password": "123" },
+  "badMobile": { "mobile": "1213313",     "email": "not-an-emai!" }
+}

@@ -1,28 +1,17 @@
-const path = require('path');
+import { config as shared } from './wdio.shared.conf.js';
+import path from 'node:path';
 
-exports.config = {
-    runner: 'local',
-    port: 4723, // Default Appium server port
-    specs: ['./tests/specs/**/*.js'],
-    capabilities: [{
-        // Android capabilities example
-        'platformName': 'Android',
-        'appium:automationName': 'UiAutomator2',
-        'appium:deviceName': 'Android_Emulator',
-        'appium:app': path.join(process.cwd(), './apps/ph.billeasev2.mobile'), // Local app path
-        'appium:autoGrantPermissions': true
-    }],
-    framework: 'mocha',
-    reporters: ['spec'],
-    services: [['appium', {
-        command: 'appium',
-        args: {
-            address: 'localhost',
-            port: 4723
-        }
-    }]],
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
-    }
+export const config = {
+  ...shared,
+  capabilities: [
+    {
+      platformName: 'Android',
+      'appium:automationName': 'UiAutomator2',
+      'appium:deviceName': process.env.ANDROID_DEVICE_NAME || 'Android Emulator',
+      'appium:platformVersion': process.env.ANDROID_PLATFORM_VERSION,
+      'appium:app': path.resolve(process.env.ANDROID_APP || './apps/android.wdio.native.app.v2.2.0.apk'),
+      'appium:autoGrantPermissions': true,
+      'appium:newCommandTimeout': 240,
+    },
+  ],
 };
